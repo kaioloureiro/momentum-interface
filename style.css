@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: normal 1em Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#interface {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#info-box {
+    font-size: 3.7em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#realTime {
+    margin-bottom: -10px;
+    font-size: 2.8em;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 1.2em;
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    margin: 0px 30px;
+    position: absolute;
+    bottom: 20px;
+}
