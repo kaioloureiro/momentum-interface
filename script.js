@@ -5,14 +5,14 @@ function horario() {
     let min = now.getMinutes()
     let sec = now.getSeconds()
     let clock = document.createElement('p')
-    let welcome = document.getElementById('welcome')
+    let greetings = document.getElementById('greetings')
 
     if (hour >= 6 && hour < 12) {
-        welcome.innerHTML = `Bom dia, Convidado`
+        greetings.innerHTML = `Bom dia, Convidado`
     } else if (hour >= 12 && hour < 18) {
-        welcome.innerHTML = `Boa tarde, Convidado`
+        greetings.innerHTML = `Boa tarde, Convidado`
     } else {
-        welcome.innerHTML = `Boa noite, Convidado`
+        greetings.innerHTML = `Boa noite, Convidado`
     }
 
     if (realTime.classList.contains('secondsEnabled')) {
@@ -22,6 +22,7 @@ function horario() {
     }
     realTime.appendChild(clock)
 }
+
 setInterval(horario, 100)
 
 function showSeconds() {
@@ -35,8 +36,10 @@ function showSeconds() {
     }
 }
 
+document.querySelector('#realTime').addEventListener('click', showSeconds)
+
 function showMessage() {
-    let msg = document.getElementById('message')
+    let msg = document.getElementById('greetings')
     msg.style.bottom = '30px'
     msg.style.transitionDuration = '0.5s'
 
